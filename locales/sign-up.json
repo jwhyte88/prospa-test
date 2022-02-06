@@ -1,0 +1,16 @@
+{
+  "alreadyMember": "Already a member?",
+  "signIn": "Sign In",
+  "stepOneTitle": "Create your account",
+  "stepOneSubtitle": "A short description about account types",
+  "stepTwoTitle": "Create a new business account",
+  "stepTwoSubtitle": "A short description comes here",
+  "formLabels": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "countryCode": "Country",
+    "mobileNumber": "Mobile number",
+    "email": "Email address",
+    "submitBtn": "Next"
+  }
+}

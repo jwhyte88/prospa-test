@@ -1,9 +1,38 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Sidebar() {
+export default function Sidebar(props) {
+
   return (
-    <nav className="nav">
-      <div>sidebar</div>
-    </nav>
+    <div className="sidebar">
+      
+      <div className="sidebar__logo">
+        <Image src="/prospa.svg" alt="Prospa Logo." width={109} height={24} />
+      </div>
+
+      <div className="sidebar__progress" />
+
+      <div className="sidebar__content">
+        {props.title && 
+          <div className="sidebar__content__title">
+            {props.title}
+          </div>
+        }
+
+        {props.detail && 
+          <div className="sidebar__content__detail">
+            {props.detail}
+          </div>
+        }
+
+        {props.img && 
+          <Image src={props.img} alt={props.imgAltText ? props.imgAltText : "Missing image alternative text."} width={294} height={304} />
+        }
+      </div>
+
+      {props.copyright && 
+        <div className="sidebar__copyright">{props.copyright}</div>
+      }
+    </div>
   )
 }

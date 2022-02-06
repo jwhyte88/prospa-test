@@ -1,6 +1,6 @@
 import Layout from '../components/layout'
 import Sidebar from '../components/sidebar'
-import SignUp from '../components/sign-up'
+import SignUpForm from '../components/forms/sign-up-form'
 
 export default function Index( props ) {
 
@@ -9,7 +9,7 @@ export default function Index( props ) {
       <Layout {...props}>
         <Sidebar {...props.sidebar} />
         <section>
-          <SignUp {...props.sidebar} />
+          <SignUpForm {...props.signup} />
         </section>
       </Layout>
     </>

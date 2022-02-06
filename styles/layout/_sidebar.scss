@@ -1,0 +1,28 @@
+.sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  width: 358px;
+  background-color: $light-violet;
+  color: $white;
+  padding: 32px;
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__copyright {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px
+  }
+
+  @media(max-width: map-get($grid-breakpoints, md)) {
+    display: none;
+  }
+}
+
+
+
