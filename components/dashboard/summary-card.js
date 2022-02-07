@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ProgressBar } from "react-bootstrap";
+import SummaryChart from './summary-chart'
 
 export default function CashOutflow(props) {
 
@@ -24,6 +24,10 @@ export default function CashOutflow(props) {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="summary__chart">
+        <SummaryChart />
       </div>
 
     </div>
