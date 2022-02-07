@@ -35,6 +35,7 @@ export default function Index( props ) {
 export async function getStaticProps() {
   return {
     props: { 
+      title: "Sign In",
       sidebar: require("../locales/sidebar.json"),
       signin: require("../locales/sign-in.json")
     },

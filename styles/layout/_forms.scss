@@ -25,7 +25,7 @@
   margin-bottom: 16px;
   input,
   select {
-    @include responsive-text-size('form-regular');
+    @include responsive-text-size('small-regular');
     width: 100%;
     background-color: $very-light-grayish-blue;
     padding: $space--md $space--sm $space--sm;
@@ -40,11 +40,27 @@
   input.has-error {
     border: 2px solid $dark-pink;;
   }
+
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(/arrow.svg);
+    background-position-x: calc(100% - 12px);
+    background-position-y: 18px;
+    background-repeat: no-repeat;
+    background-size: 12px;
+  }
+
 }
 
 .error-label {
   @include responsive-text-size('small-semibold');
   color: $dark-pink;
+}
+
+.form-row__countrycode {
+  margin-bottom: 16px;
 }
 
 @media(min-width: map-get($grid-breakpoints, md)) {
@@ -55,6 +71,8 @@
   .form-row__countrycode {
     width: 100px;
     margin-right: $space--sm;
+    vertical-align: bottom;
+    margin-bottom: 0;
   }
   .form-row__mobile {
     width: calc(100% - 112px);

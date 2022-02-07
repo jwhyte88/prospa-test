@@ -1,0 +1,64 @@
+@import url('http://fonts.cdnfonts.com/css/br-firma');
+$font-family-brfirma: 'BR Firma', sans-serif;
+
+* {
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $font-family-brfirma;
+}
+
+// Typography
+$text-sizing: (
+  xsmall-regular: (
+    xs: (
+      font-size: 12px,
+      font-weight: 400,
+      line-height: 20px
+    )
+  ),
+  small-regular: (
+    xs: (
+      font-size: 14px,
+      font-weight: 400,
+      line-height: 24px
+    )
+  ),
+  small-semibold: (
+    xs: (
+      font-size: 14px,
+      font-weight: 600,
+      line-height: 24px
+    )
+  ),
+  medium-light: (
+    xs: (
+      font-size: 20px,
+      font-weight: 300,
+      line-height: 28px
+    )
+  ),
+  medium-semibold: (
+    xs: (
+      font-size: 20px,
+      font-weight: 600,
+      line-height: 28px
+    ),
+    lg: (
+      font-size: 24px,
+      font-weight: 600,
+      line-height: 32px
+    )
+  ),
+  large-semibold: (
+    xs: (
+      font-size: 24px,
+      font-weight: 600,
+      line-height: 32px
+    ),
+    lg: (
+      font-size: 32px,
+      font-weight: 600,
+      line-height: 40px
+    )
+  )
+);
