@@ -13,6 +13,23 @@ const mockData = {
     accountNumber: "12346789",
     balance: "39,342.45"
   },
+  summaryCard: {
+    title: "June summary",
+    summary: [
+      {
+        title: "Money in",
+        amount: "5,650,00"
+      },
+      {
+        title: "Money out",
+        amount: "5,650,00"
+      },
+      {
+        title: "Difference",
+        amount: "5,650,00"
+      }
+    ]
+  },
   cashOutflow: {
     title: "Cash outflow",
     outflow: [

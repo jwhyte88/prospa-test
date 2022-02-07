@@ -1,0 +1,43 @@
+.summary-card {
+  background-color: $white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 6px;
+  padding: $space--xmd;
+  margin-bottom: $space--lg;
+  min-width: 100%;
+  @media(min-width: map-get($grid-breakpoints, xl)) {
+    min-width: auto;
+    width: calc(60% - 16px);
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: $space--lg;
+  }
+
+  &__title {
+    @include responsive-text-size('small-semibold');
+    color: $very-dark-violet;
+  }
+}
+
+.summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  .summary-breakdown {
+    margin-right: auto;
+  }
+
+  .summary-title {
+    @include responsive-text-size('small-regular');
+    color: $dark-grayish-blue;
+  }
+  .summary-amount {
+    @include responsive-text-size('small-semibold');
+    color: $very-dark-violet;
+  }
+}
