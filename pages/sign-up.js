@@ -14,7 +14,7 @@ export default function Index( props ) {
 
           <div className="sign-in__nav">
             <div className="signup__logo">
-              <Image src="/prospa--dark.svg" alt="Prospa Logo." width={109} height={24} />
+              <Image src="/logo/prospa--dark.svg" alt="Prospa Logo." width={109} height={24} />
             </div>
 
             <div className="sign-in-prompt">

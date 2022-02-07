@@ -6,7 +6,7 @@ export default function Sidebar(props) {
     <div className={`sidebar ${props.page}`}>
       
       <div className="sidebar__logo">
-        <Image src="/prospa.svg" alt="Prospa Logo." width={109} height={24} />
+        <Image src="/logo/prospa.svg" alt="Prospa Logo." width={109} height={24} />
       </div>
 
       <div className="sidebar__progress">

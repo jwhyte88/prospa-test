@@ -1,0 +1,38 @@
+.account-card {
+  background-color: $white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 6px;
+  padding: $space--xmd;
+  // margin-right: $space--lg;
+  margin-bottom: $space--lg;
+  width: 100%;
+  @media(min-width: map-get($grid-breakpoints, lg)) {
+    width: calc(50% - 16px);
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    @include responsive-text-size('small-semibold');
+    color: $very-dark-violet;
+    text-transform: uppercase;
+  }
+
+  &__bank-details {
+    @include responsive-text-size('small-regular');
+    color: $dark-grayish-blue;
+    text-transform: uppercase;
+  }
+
+  &__balance {
+     @include responsive-text-size('large-regular');
+    color: $very-dark-violet;
+    margin-top: $space--lg;
+  }
+}
+

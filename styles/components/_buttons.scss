@@ -12,10 +12,36 @@
     width: 100%;
   }
 
+  &--small {
+    padding: 4px 16px;
+    height: 32px;
+  }
+
   &--pink {
     border: 1px solid $bright-pink;
     background-color: $bright-pink;
     color: $white;
+    &:hover,
+    &:active {
+      border: 2px solid $dark-pink;
+      background-color: $light-pink;
+      color: $white;
+      padding: 9px 15px;
+    }
+    &:hover {
+      border: 2px solid $dark-pink;
+    }
+    &:active {
+      border: 2px solid $light-pink;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  &--white {
+    border: 1px solid $bright-pink;
+    background-color: $white;
+    color: $bright-pink;
     &:hover,
     &:active {
       border: 2px solid $dark-pink;

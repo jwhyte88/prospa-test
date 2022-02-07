@@ -37,6 +37,13 @@ $text-sizing: (
       line-height: 28px
     )
   ),
+  medium-regular: (
+    xs: (
+      font-size: 16px,
+      font-weight: 400,
+      line-height: 28px
+    )
+  ),
   medium-semibold: (
     xs: (
       font-size: 20px,
@@ -47,6 +54,18 @@ $text-sizing: (
       font-size: 24px,
       font-weight: 600,
       line-height: 32px
+    )
+  ),
+  large-regular: (
+    xs: (
+      font-size: 24px,
+      font-weight: 400,
+      line-height: 32px
+    ),
+    lg: (
+      font-size: 32px,
+      font-weight: 400,
+      line-height: 40px
     )
   ),
   large-semibold: (

@@ -35,6 +35,7 @@
 
     &__detail {
       @include responsive-text-size('small-regular');
+      margin-bottom: $space--lg;
     }
   }
 

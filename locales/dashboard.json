@@ -1,1 +1,59 @@
-{}
+{
+  "navigation": {
+    "accountSwitcher": {
+      "manageAccount": "Manage Account",
+      "accounts": [ 
+        {
+          "name": "Clayvant Inc",
+          "initials": "BN"
+        },
+        {
+          "name": "Vandelay Industries",
+          "initials": "VN"
+        },
+        {
+          "name": "Pendant Publishing",
+          "initials": "PP"
+        }
+      ]
+    },
+    "pages": [
+      {
+        "title": "Accounts",
+        "icon": "/icons/accounts.svg",
+        "path": "/dashboard"
+      },
+      {
+        "title": "Transfer",
+        "icon": "/icons/transfer.svg",
+        "path": "/dashboard"
+      },
+      {
+        "title": "Invoice",
+        "icon": "/icons/invoice.svg",
+        "path": "/dashboard"
+      },
+      {
+        "title": "Management",
+        "icon": "/icons/wand.svg",
+        "path": "/dashboard"
+      },
+      {
+        "title": "Security",
+        "icon": "/icons/wand.svg",
+        "path": "/dashboard"
+      },
+      {
+        "title": "Support",
+        "icon": "/icons/wand.svg",
+        "path": "/dashboard"
+      }
+    ]
+  },
+  "dashboardContainer": {
+    "headerTitle": "Dashboard",
+    "welcome": "Welcome back, Kathy",
+    "recapMsg": "Here's what has been happening in the last",
+    "addSubAccountBtn": "Add a sub account"
+  }
+}
