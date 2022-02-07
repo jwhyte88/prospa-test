@@ -1,16 +1,17 @@
 import Image from 'next/image'
-import Link from 'next/link'
 
 export default function Sidebar(props) {
 
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${props.page}`}>
       
       <div className="sidebar__logo">
         <Image src="/prospa.svg" alt="Prospa Logo." width={109} height={24} />
       </div>
 
-      <div className="sidebar__progress" />
+      <div className="sidebar__progress">
+        <div className="active" /> <div /> <div /> <div /> <div />
+      </div>
 
       <div className="sidebar__content">
         {props.title && 

@@ -3,12 +3,60 @@
   flex-direction: column;
   width: 100%;
   max-width: 376px;
-  margin: 0 auto;
+  margin: $space--xlg auto 0;
 
   &__title {
+    @include responsive-text-size('medium-semibold');
+    color: $dark-violet;
 
   }
   &__subtitle {
-    
+    @include responsive-text-size('small-regular');
+    color: $dark-grayish-blue;
+  }
+
+  form {
+    margin-top: $space--lg;
+  }
+
+}
+
+.form-row {
+  margin-bottom: 16px;
+  input,
+  select {
+    @include responsive-text-size('form-regular');
+    width: 100%;
+    background-color: $very-light-grayish-blue;
+    padding: $space--md $space--sm $space--sm;
+    border: none;
+    height: 44px;
+  }
+
+  ::placeholder {
+    @include responsive-text-size('xsmall-regular');
+    color: $dark-grayish-blue;
+  }
+  input.has-error {
+    border: 2px solid $dark-pink;;
+  }
+}
+
+.error-label {
+  @include responsive-text-size('small-semibold');
+  color: $dark-pink;
+}
+
+@media(min-width: map-get($grid-breakpoints, md)) {
+  .form-row__countrycode,
+  .form-row__mobile {
+    display: inline-block;
+  }
+  .form-row__countrycode {
+    width: 100px;
+    margin-right: $space--sm;
+  }
+  .form-row__mobile {
+    width: calc(100% - 112px);
   }
 }

@@ -1,0 +1,36 @@
+// Mixins
+@mixin respond-above ($breakpoint-name) {
+  $breakpoint-value: breakpoint($breakpoint-name);
+
+  @if $breakpoint-value {
+    @media screen and (min-width: $breakpoint-value) {
+      @content;
+    }
+  }
+}
+
+@mixin text-size ($text-size, $breakpoint-name: 'xs') {
+  $text-size-properties: text-properties-for($text-size, $breakpoint-name);
+
+  @if $text-size-properties {
+    font-size: map-get($text-size-properties, 'font-size');
+    font-weight: map-get($text-size-properties, 'font-weight');
+    line-height: map-get($text-size-properties, 'line-height');
+    color: map-get($text-size-properties, 'color');
+  }
+}
+
+@mixin responsive-text-size ($text-size, $default-breakpoint: 'xs') {
+  @include text-size($text-size, $default-breakpoint);
+
+  $text-breakpoints-map: text-breakpoints-for($text-size);
+  $text-breakpoints-keys: map-keys($text-breakpoints-map);
+
+  @each $breakpoint-name in $text-breakpoints-keys {
+    @if $breakpoint-name != $default-breakpoint {
+      @include respond-above($breakpoint-name) {
+        @include text-size($text-size, $breakpoint-name);
+      }
+    }
+  }
+}

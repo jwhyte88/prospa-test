@@ -5,12 +5,52 @@
   "stepOneSubtitle": "A short description about account types",
   "stepTwoTitle": "Create a new business account",
   "stepTwoSubtitle": "A short description comes here",
-  "formLabels": {
-    "firstName": "First name",
-    "lastName": "Last name",
-    "countryCode": "Country",
-    "mobileNumber": "Mobile number",
-    "email": "Email address",
+  "form": {
+    "firstName": {
+      "placeholder": "First name",
+      "errorMsgRequired": "First name is required",
+      "errorMsgMaxLength": "First name cannot be more than 30 character"
+    },
+    "lastName": {
+      "placeholder": "Last name",
+      "errorMsgRequired": "Last name is required",
+      "errorMsgMaxLength": "Last name cannot be more than 30 character"
+    },
+    "countryCode": {
+      "placeholder": "Country"
+    },
+    "mobileNumber": {
+      "placeholder": "Mobile number",
+      "errorMsgRequired": "Mobile number is required",
+      "errorMsgMinLength": "Mobile number cannot be less than 6 character",
+      "errorMsgMaxLength": "Mobile number cannot be more than 12 character"
+    },
+    "email": {
+      "placeholder": "Email address",
+      "errorMsgRequired": "Email address is required",
+      "errorMsgMaxLength": "Email address cannot be more than 255 character",
+      "invalidEmailAddress": "Please enter a valid email address"
+    },
     "submitBtn": "Next"
-  }
+  },
+  "businessAccountOptions": [
+    {
+      "type": "registered",
+      "title": "I have a registered business / charity with CAC",
+      "subtitle": "As a registered business you'll get",
+      "benefits": [
+        "Account in your business name",
+        "Send to and receive transfers from all Nigerian banks",
+        "Tools for business management"
+      ]
+    },
+    {
+      "type": "unregistered",
+      "title": "My business is not yet registered, I would like to register"
+    },
+    {
+      "type": "freelance",
+      "title": "I am a freelancer I do business in my personal name"
+    }
+  ]
 }

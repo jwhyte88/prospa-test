@@ -9,10 +9,8 @@ const IndexPage = (props) => {
     handleSubmit,
   } = useForm()
   const onSubmit = ({ firstname, lastname, countryCode, mobile, email }) => {
-    setUser({ name: username })
+    setUser({ name: firstname })
   }
-
-  console.log('\n\n\n props', props)
 
   return (
     <div className="form-container sign-form__signup">
@@ -30,36 +28,97 @@ const IndexPage = (props) => {
 
           <form onSubmit={handleSubmit(onSubmit)}>
 
-            <div className="row">
-              <input type="text" placeholder="First name" {...register("firstname", {required: true, minLength: { value: 1, message: 'First name cannont be less than 1 character'}, maxLength: 80})} />
+            <div className="form-row">
+              <input
+                type="text"
+                placeholder={props.form.firstName.placeholder}
+                {...register('firstname', {
+                  required: { value: true, message: props.form.firstName.errorMsgRequired },
+                  maxLength: {
+                    value: 30,
+                    message: props.form.firstName.errorMsgMaxLength,
+                  },
+                })}
+                className={'form-field' + (errors.firstname ? ' has-error' : '')}
+              />
               {errors.firstname && (
                 <span className="error-label">{errors.firstname.message}</span>
               )}
             </div>
-            
-            <div className="row">
-               <input type="text" placeholder="Last name" {...register("lastname", {required: true, minLength: { value: 1, message: 'Last name cannont be less than 1 character'}, maxLength: 80})} />
+
+            <div className="form-row">
+              <input
+                type="text"
+                placeholder={props.form.lastName.placeholder}
+                {...register('lastname', {
+                  required: { value: true, message: props.form.lastName.errorMsgRequired },
+                  maxLength: {
+                    value: 30,
+                    message: props.form.lastName.errorMsgMaxLength,
+                  },
+                })}
+                className={'form-field' + (errors.lastname ? ' has-error' : '')}
+              />
               {errors.lastname && (
                 <span className="error-label">{errors.lastname.message}</span>
               )}
             </div>
 
-            <div className="row">
-              <select {...register("countryCode", { required: true })}>
-                <option value="+233">+233</option>
-                <option value="+244">+244</option>
-              </select>
+            <div className="form-row">
+              <div className="form-row__countrycode">
+                <select {...register("countryCode", { required: true })}>
+                  <option value="+233">+233</option>
+                  <option value="+244">+244</option>
+                </select>
+              </div>
 
-              <input type="tel" placeholder="Mobile number" {...register("mobile", {required: true, minLength: 6, maxLength: 12})} />
+              <div className="form-row__mobile">
+                <input
+                  type="tel"
+                  placeholder={props.form.mobileNumber.placeholder}
+                  {...register('mobile', {
+                    required: { value: true, message: props.form.mobileNumber.errorMsgRequired },
+                    minLength: {
+                      value: 6,
+                      message: props.form.mobileNumber.errorMsgMinLength,
+                    },
+                    maxLength: {
+                      value: 12,
+                      message: props.form.mobileNumber.errorMsgMaxLength,
+                    },
+                  })}
+                  className={'form-field' + (errors.mobile ? ' has-error' : '')}
+                />
+              </div>
+              {errors.mobile && (
+                <span className="error-label">{errors.mobile.message}</span>
+              )}
             </div>
           
-            <div className="row">
-              <input type="text" placeholder="Email" {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} />
+            <div className="form-row">
+              <input
+                type="text"
+                placeholder={props.form.email.placeholder}
+                {...register('email', {
+                  required: { value: true, message: props.form.email.errorMsgRequired },
+                  pattern: { 
+                    value: /^\S+@\S+$/i, 
+                    message: props.form.email.invalidEmailAddress 
+                  },
+                  maxLength: {
+                    value: 255,
+                    message: props.form.email.errorMsgMaxLength,
+                  },
+                })}
+                className={'form-field' + (errors.email ? ' has-error' : '')}
+              />
+              {errors.email && (
+                <span className="error-label">{errors.email.message}</span>
+              )}
             </div>
 
-
-            <div className="row">
-              <button type="submit" className="btn login-btn">
+            <div className="form-row">
+              <button type="submit" className="btn btn--pink btn--full-width">
                 Next
               </button>
             </div>

@@ -1,0 +1,24 @@
+.signup__logo {
+  @media(min-width: map-get($grid-breakpoints, md)) {
+    display: none;
+  }
+}
+
+.sign-in__nav {
+  @media(min-width: map-get($grid-breakpoints, sm)) {
+    display: flex;
+    justify-content: space-between;
+  }
+  @media(min-width: map-get($grid-breakpoints, md)) {
+    justify-content: end;
+  }
+}
+
+.sign-in-prompt {
+  @include responsive-text-size('small-semibold');
+  color: $very-dark-violet;
+  text-align: left;
+  a {
+    color: $bright-pink;
+  }
+}

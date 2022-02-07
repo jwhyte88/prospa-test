@@ -1,0 +1,18 @@
+{
+  "alreadyMember": "Don’t have an account?",
+  "signIn": "Sign Up",
+  "title": "Welcome back to Prospa",
+  "subtitle": "An account, with powerful, personalised tools all in one place",
+  "form": {
+    "email": {
+      "placeholder": "Email address",
+      "errorMsgRequired": "Please enter your email address",
+      "invalidEmailAddress": "Please enter a valid email address"
+    },
+    "password": {
+      "placeholder": "Enter password",
+      "errorMsgRequired": "Please enter your password"
+    },
+    "submitBtn": "Next"
+  }
+}

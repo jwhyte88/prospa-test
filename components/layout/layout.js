@@ -4,7 +4,7 @@ export default function Layout({ children, ...pageProps }) {
   return (
     <>
       <Head>
-        <title>Prospa Test</title>
+        <title>Prospa</title>
       </Head>
       <main className="main">{children}</main>
     </>

@@ -1,9 +1,14 @@
+// Configuration and helpers
+@import 'utils/functions.scss';
+@import 'utils/mixins.scss';
+
 // Vendors
 @import '~bootstrap/scss/bootstrap';
 
 // Base/
 @import 'base/_colors.scss';
 @import 'base/_spacing.scss';
+@import 'base/_typography.scss';
 
 // Layout/
 @import 'layout/_forms.scss';

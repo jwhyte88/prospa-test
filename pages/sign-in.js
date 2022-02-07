@@ -2,14 +2,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Layout from '../components/layout/layout'
 import Sidebar from '../components/layout/sidebar'
-import SignUpForm from '../components/forms/sign-up-form'
+import SignInForm from '../components/forms/sign-in-form'
 
 export default function Index( props ) {
 
   return (
     <>
       <Layout {...props}>
-        <Sidebar {...props.sidebar} page={"signUp"} />
+        <Sidebar {...props.sidebar} page={"signIn"}/>
         <section>
 
           <div className="sign-in__nav">
@@ -18,14 +18,14 @@ export default function Index( props ) {
             </div>
 
             <div className="sign-in-prompt">
-              {props.signup.alreadyMember + ' '} 
-              <Link href="/sign-in">
-                <a>{props.signup.signIn}</a>
+              {props.signin.alreadyMember + ' '} 
+              <Link href="/sign-up">
+                <a>{props.signin.signIn}</a>
               </Link>
             </div>
           </div>
 
-          <SignUpForm {...props.signup} />
+          <SignInForm {...props.signin} />
         </section>
       </Layout>
     </>
@@ -36,7 +36,7 @@ export async function getStaticProps() {
   return {
     props: { 
       sidebar: require("../locales/sidebar.json"),
-      signup: require("../locales/sign-up.json")
+      signin: require("../locales/sign-in.json")
     },
   }
 }

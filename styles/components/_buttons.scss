@@ -1,35 +1,36 @@
 .btn {
-  // @include responsive-text-size('small-semibold');
+  @include responsive-text-size('small-semibold');
   box-sizing: border-box;
   border-radius: 8px;
   padding: 10px 16px;
-  height: 48px;
-}
-.btn--primary {
-  // border: 1px solid map-get($home-colors, "yellow");
-  // background-color: map-get($home-colors, "yellow");
-  // color: map-get($home-colors, "black");
-}
-.btn--primary:hover {
-  // border: 2px solid map-get($home-colors, "yellow");
-  // background-color: map-get($home-colors, "light-yellow");
-  padding: 9px 15px;
-}
-.btn--primary:active {
-  // border: 2px solid map-get($home-colors, "light-yellow");
-  // background-color: map-get($home-colors, "light-yellow");
-  padding: 9px 15px;
-}
+  height: 50px;
+  text-align: center;
+  width: auto;
+  max-width: auto;
 
-.btn-full-width {
-  width: 100%;
-  max-width: 280px;
+  &--full-width {
+    width: 100%;
+  }
+
+  &--pink {
+    border: 1px solid $bright-pink;
+    background-color: $bright-pink;
+    color: $white;
+    &:hover,
+    &:active {
+      border: 2px solid $dark-pink;
+      background-color: $light-pink;
+      color: $white;
+      padding: 9px 15px;
+    }
+    &:hover {
+      border: 2px solid $dark-pink;
+    }
+    &:active {
+      border: 2px solid $light-pink;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
 }
-// }
-// @media (min-width: map-get($home-breakpoints, sm)) {
-//   .home {
-//     .btn-full-width {
-//       width: auto;
-//       max-width: auto;
-//     }
-//   }
