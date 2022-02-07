@@ -9,12 +9,12 @@
     "firstName": {
       "placeholder": "First name",
       "errorMsgRequired": "First name is required",
-      "errorMsgMaxLength": "First name cannot be more than 30 character"
+      "errorMsgMaxLength": "First name cannot be more than 30 characters"
     },
     "lastName": {
       "placeholder": "Last name",
       "errorMsgRequired": "Last name is required",
-      "errorMsgMaxLength": "Last name cannot be more than 30 character"
+      "errorMsgMaxLength": "Last name cannot be more than 30 characters"
     },
     "countryCode": {
       "placeholder": "Country"
@@ -22,13 +22,13 @@
     "mobileNumber": {
       "placeholder": "Mobile number",
       "errorMsgRequired": "Mobile number is required",
-      "errorMsgMinLength": "Mobile number cannot be less than 6 character",
-      "errorMsgMaxLength": "Mobile number cannot be more than 12 character"
+      "errorMsgMinLength": "Mobile number cannot be less than 6 numbers",
+      "errorMsgMaxLength": "Mobile number cannot be more than 12 numbers"
     },
     "email": {
       "placeholder": "Email address",
       "errorMsgRequired": "Email address is required",
-      "errorMsgMaxLength": "Email address cannot be more than 255 character",
+      "errorMsgMaxLength": "Email address cannot be more than 255 characters",
       "invalidEmailAddress": "Please enter a valid email address"
     },
     "submitBtn": "Next"

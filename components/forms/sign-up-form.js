@@ -69,6 +69,7 @@ const IndexPage = (props) => {
                 <select {...register("countryCode", { required: true })}>
                   <option value="+233">+233</option>
                   <option value="+244">+244</option>
+                  <option value="+44">+44</option>
                 </select>
               </div>
 

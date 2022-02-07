@@ -1,0 +1,26 @@
+{
+  "xs": {
+    "width": 0,
+    "length": 480
+  },
+  "sm": {
+    "width": 576,
+    "length": 480
+  },
+  "md": {
+    "width": 768,
+    "length": 768
+  },
+  "lg": {
+    "width": 992,
+    "length": 800
+  },
+  "xl": {
+    "width": 1200,
+    "length": 1024
+  },
+  "xxl": {
+    "width": 1400,
+    "length": 1024
+  }
+}
