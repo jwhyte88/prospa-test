@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import AccountCard from './account-card'
 // import SummaryCard from './summary-card'
-// import CashOutflow from './cash-outflow'
+import CashOutflow from './cash-outflow'
 import RecentTransactions from './recent-transactions'
 import MockData from './mock-data'
 
@@ -52,6 +52,8 @@ export default function Dashboard(props) {
             <AccountCard mockData={MockData.currentAccount}/>
 
             <AccountCard mockData={MockData.savingsAccount}/>
+
+            <CashOutflow mockData={MockData.cashOutflow}/>
 
             <RecentTransactions mockData={MockData.recentTransactions}/>
 

@@ -19,7 +19,7 @@ export default function AccountCard(props) {
           }
         </div>
         <div>
-          <Image src={"/icons/" + props.mockData.type + "-account.svg"} alt="Profile image." width={40} height={40} />
+          <Image src={"/icons/" + props.mockData.type + "-account.svg"} alt={props.mockData.type + " account icon"} width={40} height={40} />
         </div>
       </div>
 

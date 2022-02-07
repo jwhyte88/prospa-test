@@ -57,7 +57,7 @@ export default function Navigation(props) {
           <div className="dashboard-nav__menu">
             <ul>
               {props.pages.map((nav) => (
-                <li>
+                <li key={nav.title}>
                   <Image src={nav.icon} alt={nav.title + " icon"} width={24} height={24} />
                   <Link href={nav.path}>
                     <a>{nav.title}</a>

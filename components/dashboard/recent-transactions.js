@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
 export default function RecentTransactions(props) {
-  console.log('\n\n\n\n props', props)
 
   return (
     <div className="recent-transactions">
@@ -22,7 +21,7 @@ export default function RecentTransactions(props) {
         <div className="transaction">
           <div className="transaction__details">
             <div>
-              <Image src={"/icons/recent--" + transaction.type + ".svg"} alt="Profile image." width={40} height={40} />
+              <Image src={"/icons/recent--" + transaction.type + ".svg"} alt={transaction.type + " transaction icon"} width={40} height={40} />
             </div>
             <div className="transaction__details__text">
               <div className="transaction__details__title">

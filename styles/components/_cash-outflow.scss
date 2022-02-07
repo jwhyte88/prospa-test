@@ -1,0 +1,89 @@
+.cash-outflow {
+  background-color: $white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 6px;
+  padding: $space--xmd;
+  margin-right: $space--lg;
+  margin-bottom: $space--lg;
+  min-width: 100%;
+  @media(min-width: map-get($grid-breakpoints, xl)) {
+    min-width: auto;
+    width: calc(40% - 16px);
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: $space--lg;
+  }
+
+  &__title {
+    @include responsive-text-size('small-semibold');
+    color: $very-dark-violet;
+  }
+}
+
+.outflow {
+  margin-bottom: $space--xmd;
+  &__icon,
+  &__title {
+    justify-content: center;
+    align-content: center;
+    display: flex;
+  }
+  &__title {
+    @include responsive-text-size('small-regular');
+    color: $dark-grayish-blue;
+    margin-left: $space--sm;
+  }
+  .outflow__inline,
+  .outflow__progress {
+    display: inline-block;
+  }
+  .outflow__inline {
+    width: 160px;
+  }
+  .outflow__progress {
+    width: calc(100% - 160px);
+    span {
+      @include responsive-text-size('small-semibold');
+      color: $very-dark-violet;
+    }
+    .progress {
+      height: 6px;
+    }
+    .progress-bar {
+      background-color: $light-orange;
+    }
+  }
+}
+
+.transaction {
+  border-bottom: 1px solid $light-blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: $space--md;
+  padding-bottom: $space--md;
+  &__details {
+    display: flex;
+    flex-direction: row;
+    &__text {
+      padding-left: $space--md;
+    }
+    &__title {
+      @include responsive-text-size('small-semibold');
+      color: $very-dark-violet;
+    }
+    &__timestamp {
+      @include responsive-text-size('small-regular');
+      color: $dark-grayish-blue;
+    }
+  }
+  &__amount {
+      @include responsive-text-size('small-regular');
+      color: $very-dark-violet;
+  }
+}
