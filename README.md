@@ -14,7 +14,7 @@ The following pages are available locally to review.
 
 - Sign Up - [http://localhost:3000/sign-up](http://localhost:3000/sign-up)
 - Sign In - [http://localhost:3000/sign-in](http://localhost:3000/sign-in)
-- Dashboard - [http://localhost:3000/sign-in](http://localhost:3000/dashboard)
+- Dashboard - [http://localhost:3000/dashboard](http://localhost:3000/dashboard)
 
 ## Stack
 This project uses the following libraries and services:
