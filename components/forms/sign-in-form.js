@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { useRouter } from 'next/router'
 
 const IndexPage = (props) => {
   const [user, setUser] = useState()
+  const router = useRouter()
+
   const {
     register,
     formState: { errors },
@@ -10,6 +13,7 @@ const IndexPage = (props) => {
   } = useForm()
   const onSubmit = ({ email, password }) => {
     setUser({ name: email })
+    router.push('/dashboard')
   }
 
   return (
