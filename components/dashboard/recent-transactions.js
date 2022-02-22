@@ -17,8 +17,8 @@ export default function RecentTransactions(props) {
         </div>
       </div>
 
-      {props.mockData.transactions.map((transaction) => (
-        <div className="transaction">
+      {props.mockData.transactions.map((transaction, index) => (
+        <div className="transaction" key={index + transaction.type}>
           <div className="transaction__details">
             <div>
               <Image src={"/icons/recent--" + transaction.type + ".svg"} alt={transaction.type + " transaction icon"} width={40} height={40} />

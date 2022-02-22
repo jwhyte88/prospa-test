@@ -14,8 +14,8 @@ export default function CashOutflow(props) {
       </div>
 
       <div className="summary">
-        {props.mockData.summary.map((s) => (
-          <div className="summary-breakdown">
+        {props.mockData.summary.map((s, index) => (
+          <div className="summary-breakdown" key={index + s.title}>
             <div className="summary-title">
               {s.title}
             </div>
