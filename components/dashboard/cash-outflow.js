@@ -13,8 +13,8 @@ export default function CashOutflow(props) {
         }
       </div>
 
-      {props.mockData.outflow.map((outflow) => (
-        <div className="outflow">
+      {props.mockData.outflow.map((outflow, index) => (
+        <div className="outflow" key={index + outflow.type}>
           <div className="outflow__inline">
             <div className="d-flex">
               <div className="outflow__icon">

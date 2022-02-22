@@ -40,7 +40,7 @@ const data = {
   ]
 };
 
-export default () => (
+const SummaryChart = () => (
   <div>
     <Line
       data={data}
@@ -50,3 +50,5 @@ export default () => (
     />
   </div>
 );
+
+export default SummaryChart;
